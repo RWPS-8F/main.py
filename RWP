@@ -1,0 +1,29 @@
+import time
+ 
+def read_sound_level():
+    # Placeholder function to read the analog sound level
+    # Replace this with actual sensor reading code depending on hardware setup
+    # For example, reading from ADC or getting simulated input
+    return int(input("Enter sound level reading: "))
+ 
+def main():
+    led_state = False
+ 
+    while True:
+        sound_level = read_sound_level()
+        print(f"Sound level: {sound_level}")
+ 
+        if sound_level > 50:  # Adjust threshold as needed
+            led_state = True
+        else:
+            led_state = False
+ 
+        if led_state:
+            print("LED ON")
+        else:
+            print("LED OFF")
+ 
+        time.sleep(0.05)  # 50 milliseconds delay
+ 
+if __name__ == "__main__":
+    main()
