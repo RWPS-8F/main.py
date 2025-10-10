@@ -13,7 +13,7 @@ def main():
         sound_level = read_sound_level()
         print(f"Sound level: {sound_level}")
  
-        if sound_level > 50:  # Adjust threshold as needed
+        if sound_level > 90:  # Adjust threshold as needed
             led_state = True
         else:
             led_state = False
